@@ -1,24 +1,17 @@
 package com.rt.manger.model
 
+import android.graphics.Bitmap
 import androidx.compose.ui.graphics.Color
 
 data class InstalledApp(
     val packageName: String,
     val label: String,
-    val primaryColor: Color? = null,
-    val iconUri: String? = null,
+    val icon: Bitmap?,
+    val primaryColor: Color?,
     val isEdited: Boolean = false
 )
 
-enum class LayerType {
-    RASTER,
-    VECTOR,
-    SHAPE,
-    LINE,
-    TEXT,
-    MASK,
-    EFFECT
-}
+enum class LayerType { RASTER, VECTOR, SHAPE, LINE, TEXT, MASK, EFFECT }
 
 data class IconLayer(
     val id: String,
